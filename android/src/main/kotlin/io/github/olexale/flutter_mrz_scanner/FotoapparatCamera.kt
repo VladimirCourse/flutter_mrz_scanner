@@ -163,7 +163,7 @@ class FotoapparatCamera constructor(
         }
 
         val mrzZoneOffset = if (cropToMRZ)  height*0.6 else 0.toDouble()
-        val topOffset = (bitmap.height - height) / 2 + mrzZoneOffset
+        val topOffset = (bitmap.height - height) / 2 //+ mrzZoneOffset
         val leftOffset = (bitmap.width - width) / 2
 
         return Bitmap.createBitmap(bitmap, leftOffset.toInt(), topOffset.toInt(), width.toInt(), (height - mrzZoneOffset).toInt())
